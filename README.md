@@ -1,11 +1,7 @@
 # P2P-Over-MiddleBoxes-Demo
 A simple demo of P2P communication over middle boxes such as NAT
 
-## compile:
-    
-    make
+# Usage:
 
-## run:
-
-    ./server [host] port
-    ./client
+    python server.py [host] port
+    python peer.py <host> <port>

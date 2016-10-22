@@ -5,10 +5,10 @@ import sys
 peers = {}
 def handle_msg(sock):
     while(True):
-        data, addr = sock.recvfrom(128)
-        print addr, data
-        peers[addr] = True
         try:
+            data, addr = sock.recvfrom(128)
+            print addr, data
+            peers[addr] = True
             cmd = data.split()
             if(cmd[0] == 'list'):
                 peerlist = ''

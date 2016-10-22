@@ -9,6 +9,8 @@ def handle_msg(sock):
        data, addr = sock.recvfrom(128)
        print addr, data
        respond = data.split()
+       if(len(respond) < 1):
+           continue
        if respond[0] == "punch_from":
            p_addr = respond[1]
            p_port = int(respond[2])
