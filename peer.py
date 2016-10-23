@@ -7,7 +7,7 @@ import threading
 def handle_msg(sock):
     while True:
        data, addr = sock.recvfrom(128)
-       print addr, data
+       print 'Receive message from {}:{} => {}'.format(addr[0], addr[1], data)
        respond = data.split()
        if(len(respond) < 1):
            continue
